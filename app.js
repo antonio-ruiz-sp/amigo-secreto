@@ -15,10 +15,13 @@ function agregarAmigo(){
         alert('Favor de ingresar un nombre valido!');
         return;
     }
+    //checar duplicados
+    if(amigos.includes(nombreAmigo)){
+        alert(`El nombre ${nombreAmigo} ya existe!`);
+    }
     amigos.push(nombreAmigo);
     console.log(amigos);
     
-    //let currentList = document.querySelector('#listaAmigos').innerHTML;
     //limpiar lista para evitar duplicados
     document.querySelector('#listaAmigos').innerHTML="";
     document.querySelector('#resultado').innerHTML="";
